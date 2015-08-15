@@ -1,3 +1,10 @@
+# The be_cacheable matcher looks at the x_check_cacheable header, which is an
+# Akamai-specific thing, not part of the vanilla HTTP spec.
+
+# The matchers have_no_cache_set, not_be_cached and be_tier_distributed work by
+# inspecting the cache-control, x_cache and x_check_cacheable headers. So it's a
+# mix of standard and custom mechanisms.
+
 require 'rspec'
 require 'securerandom'
 

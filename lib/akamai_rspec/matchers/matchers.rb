@@ -1,3 +1,11 @@
+# The be_served_from_origin matcher takes one parameter and works by sending a
+# request to the CDN and checking that the request passed through by checking
+# the response headers against some expected behaviour. See the helper methods
+# x_cache_headers_contain, has_x_cache_headers and x_cache_headers_from_origin.
+
+# The be_forwarded_to_index matcher works not inspecting the debug headers, not
+# simply by looking for a 301 or 302 response code.
+
 require 'securerandom'
 require 'rspec'
 require_relative 'redirects'

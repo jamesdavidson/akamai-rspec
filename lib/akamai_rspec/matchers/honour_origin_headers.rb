@@ -1,3 +1,15 @@
+# The honour_origin_cache_headers matcher works by sending two requests and
+# comparing the responses. The first request goes to the Akamai CDN and the
+# second goes to the origin server.
+
+# Basically, the Akamai server should respond with the same headers as the
+# origin server. Though this is not always the case.
+
+# There can be see some differences. For example, in the clean_cc_directives
+# helper method, the 'must-revalidate' part of the cache-control header is
+# apparently discarded. The other differences are mostly just demunging various
+# time-stamp formats.
+
 require 'rspec'
 require 'set'
 require 'time'

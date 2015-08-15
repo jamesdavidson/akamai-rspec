@@ -1,3 +1,6 @@
+# Extensions of the Request class in the RestClient module, mostly configuration
+# for the matchers such as hostnames for the various endpoints.
+
 require 'rest-client'
 require 'akamai_rspec'
 

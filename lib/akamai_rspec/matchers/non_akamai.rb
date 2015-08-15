@@ -1,3 +1,14 @@
+# The be_successful matcher looks for a HTTP response code of 200.
+
+# The be_verifiably_secure matcher uses the OpenSSL library to check that the
+# CDN is using TLS correctly. This should pick up little problems like expiry of # the certificate and maybe even some web-of-trust concerns. TODO: are any of
+# these helper functions actually being used?
+
+# The be_gzipped matcher checks the content-type header of the response.
+
+# The have_cookie matcher takes one argument, a cookie value, and checks that
+#
+
 require 'rspec'
 require 'socket'
 require 'openssl'

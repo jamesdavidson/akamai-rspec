@@ -1,3 +1,7 @@
+# The be_permanently_redirected, be_temporarily_redirected and
+# be_temporarily_redirected_with_trailing_slash matchers work by checking that
+# the response code is 301 or 302 and checking the path.
+
 require 'rspec'
 
 RSpec::Matchers.define :be_permanently_redirected_to do |expected_location|
