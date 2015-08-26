@@ -1,7 +1,7 @@
 describe 'honour_origin_cache_headers' do
 
-  let(:a_date_in_the_future) { 'Thu, 01 Dec 2015 07:00:00 GMT' }
-  let(:a_date_in_the_future_plus_one) { 'Thu, 01 Dec 2015 07:01:00 GMT' }
+  let(:a_date_in_the_future) { (Time.now + 6*30*24*3600).httpdate }
+  let(:a_date_in_the_future_plus_one) { (Time.now + 6*30*24*3600 + 1).httpdate }
 
   it 'should succeed when headers are the same' do
     origin = 'http://www.example.com/stuff'
